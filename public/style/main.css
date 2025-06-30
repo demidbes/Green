@@ -199,6 +199,24 @@ svg * {
   }
 }
 
+.fixed-container {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
+  padding-inline: var(--container-padding);
+}
+@media (max-width: 767px) {
+  .fixed-container {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 481px) {
+  .fixed-container {
+    padding-inline: 10px;
+  }
+}
+
 @media (max-width: 767px) {
   .hidden-mobile {
     display: none !important;
@@ -244,10 +262,12 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   font-weight: 800;
   text-transform: uppercase;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  right: 0;
 }
 .header__inner {
-  position: sticky;
-  margin-top: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;

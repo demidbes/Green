@@ -12,6 +12,22 @@
     }
 }
 
+.fixed-container {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    padding-inline: var(--container-padding);
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+
+    @include mobile-s {
+        padding-inline: 10px;
+    }
+}
+
 .hidden-mobile {
     @include mobile {
         display: none !important;
