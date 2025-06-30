@@ -150,10 +150,53 @@ svg * {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: "Kicker";
+  src: url("../fonts/Kicker-Regular.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter/Inter-VariableFont_opsz,wght.ttf") format("woff2");
+  font-weight: 500 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jomhuria";
+  src: url("../fonts/Jomhuria-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --color-green: #37F333;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-green-light: #C3FFBE;
+  --container-width: 1320px;
+  --container-padding: 30px;
+  --border-header: 3px solid black;
+  --shadow-XL: 0 10px black;
+  --shadow-L: 0 5px black;
+  --radius-XL: 900px;
+  --radius-L: 90px;
+  --radius-M: 30px;
+}
+
 .container {
   margin-inline: auto;
   max-width: var(--container-width);
   padding-inline: var(--container-padding);
+}
+@media (max-width: 767px) {
+  .container {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 481px) {
+  .container {
+    padding-inline: 10px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -168,7 +211,152 @@ svg * {
   }
 }
 
+@media (max-width: 1281px) {
+  .hidden-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .visible-desktop {
+    display: none !important;
+  }
+}
+
+body {
+  background-color: var(--color-green-light);
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+}
+
+.header {
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.header__inner {
+  position: sticky;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 15px;
+  background-color: var(--color-green);
+  border-radius: var(--radius-XL);
+  border: var(--border-header);
+  box-shadow: var(--shadow-XL);
+}
+@media (max-width: 1281px) {
+  .header__inner {
+    flex-wrap: wrap;
+    border-radius: var(--radius-M);
+    padding: 20px;
+  }
+}
+.header__menu {
+  font-weight: 800;
+}
+@media (max-width: 1281px) {
+  .header__menu {
+    order: 1;
+    flex-basis: 100%;
+  }
+}
+.header__menu-list {
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 1281px) {
+  .header__menu-list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    margin-top: 45px;
+    margin-bottom: 24px;
+  }
+}
+.header__menu-list-item {
+  background-color: var(--color-white);
+  border-radius: var(--radius-L);
+  line-height: 1;
+  padding: 6px 15px;
+}
+.header__link span {
+  display: inline-block;
+  border: var(--border-header);
+  box-shadow: var(--shadow-L);
+  border-radius: var(--radius-XL);
+  padding: 10px 58px;
+  margin: 10px 0 14px 0;
+  background-color: var(--color-white);
+}
+@media (max-width: 1281px) {
+  .header__link span {
+    margin: 9px 0 0 0;
+  }
+}
+@media (max-width: 1281px) {
+  .header__link {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-self: flex-start;
+    order: 2;
+  }
+}
+.header__burger-button {
+  display: block;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 33px;
+  height: 25px;
+  border-radius: var(--radius-L);
+  position: relative;
+}
+.header__burger-button::before, .header__burger-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 33px;
+  height: 4px;
+  background-color: var(--color-black);
+  border-radius: var(--radius-L);
+}
+.header__burger-button::before {
+  top: 0;
+  box-shadow: 0 10.5px 0 #000;
+  transition: box-shadow 0.2s 0.1s, top 0.2s 0.1s, transform 0.2s;
+}
+.header__burger-button::after {
+  bottom: 0;
+  transition: bottom 0.2s 0.1s, transform 0.2s;
+}
+.header__burger-button.active::before {
+  top: 11px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 #000;
+  transition: box-shadow 0.1s, top 0.2s, transform 0.2s 0.1s;
+}
+.header__burger-button.active::after {
+  bottom: 10px;
+  transform: rotate(-45deg);
+  transition: bottom 0.2s, transform 0.2s 0.1s;
+}
+@media (max-width: 1281px) {
+  .header__burger-button {
+    margin-left: auto;
+  }
 }/*# sourceMappingURL=main.css.map */

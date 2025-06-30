@@ -1,0 +1,121 @@
+.header {
+    font-weight: 800;
+    text-transform: uppercase;
+    &__inner {
+        position: sticky;
+        margin-top: 30px;
+        @include flex-center;
+        padding-left: 40px;
+        padding-right: 15px;
+        background-color: var(--color-green);
+        border-radius: var(--radius-XL);
+        border: var(--border-header);
+        box-shadow: var(--shadow-XL);
+
+        @include desktop {
+            flex-wrap: wrap;
+            border-radius: var(--radius-M);
+            padding: 20px;
+        }
+    }
+
+    &__menu {
+        font-weight: 800;
+
+        @include desktop {
+            order: 1;
+            flex-basis: 100%;
+        }
+    }
+
+    &__menu-list {
+        @include flex-gap(15);
+
+        @include desktop {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 10px;
+            margin-top: 45px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__menu-list-item {
+        background-color: var(--color-white);
+        border-radius: var(--radius-L);
+        line-height: 1;
+        padding: 6px 15px;
+    }
+
+    &__link {
+        & span {
+            display: inline-block;
+            border: var(--border-header);
+            box-shadow: var(--shadow-L);
+            border-radius: var(--radius-XL);
+            padding: 10px 58px;
+            margin: 10px 0 14px 0;
+            background-color: var(--color-white);
+
+            @include desktop {
+                margin: 9px 0 0 0;
+            }
+        }
+
+        @include desktop {
+            flex-basis: 100%;
+            flex-grow: 1;
+            align-self: flex-start;
+            order: 2;
+        }
+    }
+
+    &__burger-button {
+        display: block;
+        @include reset-button;
+        width: 33px;
+        height: 25px;
+        border-radius: var(--radius-L);
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 33px;
+            height: 4px;
+            background-color: var(--color-black);
+            border-radius: var(--radius-L);
+        }
+
+        &::before {
+            top: 0;
+            box-shadow: 0 10.5px 0 #000;
+            transition: box-shadow .2s .1s, top .2s .1s, transform .2s;
+        }
+
+        &::after {
+            bottom: 0;
+            transition: bottom .2s .1s, transform .2s;
+        }
+
+        &.active::before {
+            top: 11px;
+            transform: rotate(45deg);
+            box-shadow: 0 0 #000;
+            transition: box-shadow .1s, top .2s, transform .2s .1s;
+        }
+
+        &.active::after {
+            bottom: 10px;
+            transform: rotate(-45deg);
+            transition: bottom .2s, transform .2s .1s;
+        }
+
+        @include desktop {
+            margin-left: auto;
+        }
+    }
+
+}

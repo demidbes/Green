@@ -4,6 +4,11 @@
   align-items: center;
 }
 
+@mixin flex-gap($gap) {
+  display: flex;
+  gap: #{$gap}px;
+}
+
 @mixin flex-between {
   display: flex;
   justify-content: space-between;

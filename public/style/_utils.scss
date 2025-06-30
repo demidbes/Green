@@ -2,6 +2,14 @@
     margin-inline: auto;
     max-width: var(--container-width);
     padding-inline: var(--container-padding);
+
+    @include mobile {
+        padding-inline: 20px;
+    }
+
+    @include mobile-s {
+        padding-inline: 10px;
+    }
 }
 
 .hidden-mobile {
@@ -12,6 +20,18 @@
 
 .visible-mobile {
     @include mobile-above {
+        display: none !important;
+    }
+}
+
+.hidden-desktop  {
+    @include desktop {
+        display: none !important;
+    }
+}
+
+.visible-desktop {
+    @include desktop-above {
         display: none !important;
     }
 }
