@@ -4,16 +4,21 @@
     --color-black: #000000;
     --color-green-light: #C3FFBE;
 
-    --container-width: 1320px;
+    --container-width: 1440px;
     --container-padding: 30px;
 
     --border-header: 3px solid black;
+    --border-main: 5px solid black;
 
-    --shadow-XL: 0 10px black;
+    --shadow-XL-black: 0 10px black;
+    --shadow-XL-green: 0 10px #23DC1F;
     --shadow-L: 0 5px black;
 
     --radius-XL: 900px;
     --radius-L: 90px;
+    --radius-S: 60px;
     --radius-M: 30px;
+    --radius-circle: 50%;
+
 
 }

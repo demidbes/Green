@@ -3,6 +3,8 @@ body {
   font-family: "Inter";
   font-weight: 500;
   font-size: 16px;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 a {
@@ -14,5 +16,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Inter";
   font-weight: 500;
   font-style: normal;
+}
+
+h2 {
+  max-width: max-content;
+  font-family: 'Inter';
+  font-weight: 800;
+  @include fluid-text(38, 20);
+  margin-inline: auto;
+  background-color: var(--color-green);
+  padding: 14px 30px 8px 30px;
+  border-radius: var(--radius-L);
+  box-shadow: var(--shadow-XL-green);
+  text-align: center;
+
+  @include mobile-s {
+    padding-inline: 20px;
+    max-width: 270px;
+  }
 }
 

@@ -5,6 +5,15 @@
     top: 30px;
     left: 0;
     right: 0;
+    z-index: 100;
+    @include mobile {
+        top: 20px;
+    }
+
+    @include mobile-s {
+        top: 10px;
+    }
+
     &__inner {
         @include flex-center;
         padding-left: 40px;
@@ -12,7 +21,7 @@
         background-color: var(--color-green);
         border-radius: var(--radius-XL);
         border: var(--border-header);
-        box-shadow: var(--shadow-XL);
+        box-shadow: var(--shadow-XL-black);
 
         @include desktop {
             flex-wrap: wrap;
@@ -53,12 +62,8 @@
     &__link {
         & span {
             display: inline-block;
-            border: var(--border-header);
-            box-shadow: var(--shadow-L);
-            border-radius: var(--radius-XL);
             padding: 10px 58px;
             margin: 10px 0 14px 0;
-            background-color: var(--color-white);
 
             @include desktop {
                 margin: 9px 0 0 0;
