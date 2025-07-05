@@ -24,11 +24,13 @@
     box-shadow: var(--shadow-XL-black);
     border-radius: var(    --radius-S);
     background-color: var(--color-white);
-    @include flex-center;
-    justify-content: center;
 }
 
-
+.image-frame {
+    border: var(--border-main);
+    border-radius: var(--radius-S);
+    box-shadow: var(--shadow-XL-black);
+}
 
 .green-frame {
     border: var(--border-main);

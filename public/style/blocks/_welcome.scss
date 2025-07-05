@@ -1,0 +1,383 @@
+.welcome {
+    margin-top: -600px;
+    position: relative;
+    z-index: 10;
+
+    @include desktop {
+        margin-top: -200px;
+    }
+    &__inner {
+        padding: 80px;
+        padding-top: 70px;
+
+        @include tablet {
+            padding: 50px;
+        }
+
+        @include mobile {
+            padding-top: 40px;
+            padding-inline: 10px;
+            padding-bottom: 280px;
+        }
+    }
+    // первый заголовок и описание его
+    &__title {
+        font-family: 'Kicker';
+        @include fluid-text(68, 28);
+        font-weight: bold;
+        line-height: 0.9;
+        letter-spacing: -0.02;
+        text-align: center;
+        margin-bottom: 20px;
+
+        & > span {
+            color: var(--color-green);
+        }
+
+    }
+
+    &__descritpion {
+        font-family: 'Inter';
+        font-weight: 700;
+        @include fluid-text(28, 16);
+        text-align: center;
+        margin-bottom: 60px;
+        
+        @include mobile {
+            margin-bottom: 72px;
+        }
+    }
+    // картинки
+    &__images-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 300px 300px;
+        gap: 30px;
+        position: relative;
+        margin-bottom: 80px;
+
+        & > img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        & > :nth-child(1) {
+            grid-area: 1 / 1 / 3 / 2;
+            
+        }
+
+        & > :nth-child(2) {
+            grid-area: 1 / 3 / 2 / 5;
+        }
+
+        & > :nth-child(3) {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+
+        & > :nth-child(4) {
+            grid-area: 2 / 2 / 3 / 4;
+        }
+
+        & > :nth-child(5) {
+            grid-area: 2 / 4 / 3 / 5;
+        }
+
+
+        @include desktop {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 300px 300px;
+
+            & > :nth-child(2) {
+                grid-area: 1 / 2 / 2 / 4;
+            }
+
+            & > :nth-child(3) {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            & > :nth-child(4) {
+                grid-area: 2 / 1 / 3 / 3;
+            }
+
+            & > :nth-child(5) {
+                grid-area: 2 / 3 / 3 / 4;
+            }
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px 300px;
+            margin-bottom: 70px;
+
+            & > :nth-child(2) {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+
+            & > :nth-child(4) {
+                grid-area: 2 / 1 / 3 / 2;
+            }
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-rows: 280px;
+            margin-bottom: 60px;
+
+            & > :nth-child(4) {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+        }
+
+        @include mobile-s {
+            & > :nth-child(4) {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+        }
+    }
+
+    &__images-wrapper-hand {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        top: -42px;
+        left: -22px;
+
+        @include desktop {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include tablet {
+            width: 90px;
+            height: 90px;
+            & > img {
+                width: 47px;
+                height: 41px;
+            }
+        }
+
+        @include tablet {
+            width: 81px;
+            height: 81px;
+            top: -40px;
+            left: 24px;
+        }
+    }
+    // Шаги заголовок
+    &__for-steep {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 60px;
+
+        @include desktop {
+            justify-content: center;
+            row-gap: 26px;
+            flex-wrap: wrap;
+        }
+        
+    }
+
+    &__for-steep-title {
+        font-family: 'Kicker';
+        @include fluid-text(68, 28);
+        font-weight: bold;
+        line-height: 0.9;
+        letter-spacing: -0.02;
+        white-space: wrap;
+
+        & > span {
+            color: var(--color-green);
+        }
+
+        @include desktop {
+            text-align: center;
+        }
+
+    }
+
+    &__for-steep-banner {
+        display: flex;
+        align-items: flex-end;
+        &::before,
+        &::after {
+            display: inline-block;
+            color: var(--color-white);
+            font-family: 'Kicker';
+            font-weight: bold;
+            @include fluid-text(50, 30);
+            line-height: 0.9;
+            letter-spacing: -0.02;
+            padding: 22px 31px 12px 31px;
+            border-radius: var(--radius-XL);
+            
+        }
+
+        &::before {
+            content: "Всего";
+            background-color: var(--color-black);
+            transform: rotate(-3.65deg);
+        }
+
+        &::after {
+            content: "4 шага";
+            background-color: var(--color-green);
+            transform: rotate(10.88deg);
+            white-space: nowrap;
+            margin-bottom: 40px;
+            margin-left: -100px;
+
+            @include tablet {
+                margin-left: -80px;
+            }
+        }
+
+    }
+    // Сами шаги
+    &__steeps {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(280px, 600px));
+        grid-template-rows: 360px minmax(360px, 665px);
+        row-gap: 30px;
+        column-gap: 20px;
+
+        & > :nth-child(3) {
+            max-height: 655px;
+            min-height: 450px;
+        }
+        
+        & > :nth-child(4) {
+            max-height: 400px;
+        }
+
+        @include mobile {
+            grid-template-columns: minmax(280px, auto);
+            grid-template-rows: repeat(4, minmax(200px, auto));
+            row-gap: 70px;
+            
+        }
+    }
+
+    &__steep {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px;
+        padding-bottom: 40px;
+        &.welcome__steep--warning {
+            display: block;
+            padding: 0;
+        }
+
+        @include tablet {
+            padding: 40px;
+        }
+
+        @include mobile-s {
+            padding: 30px;
+        }
+    }
+
+    
+
+    &__steep-title {
+        color: var(--color-green);
+        @include fluid-text(46, 26);
+        white-space: wrap;
+        padding-right: 130px;
+    }
+
+    &__steep-description {
+        font-family: 'Inter';
+        font-weight: 700;
+        @include fluid-text(20, 16);
+    }
+
+    &__steep-number {
+        position: absolute;
+        width: 122px;
+        height: 122px;
+        top: 24px;
+        right: 25px;
+        @include fluid-text(68, 42);
+        font-family: 'Kicker';
+        font-weight: bold;
+
+        @include desktop {
+            width: 90px;
+            height: 90px;
+            top: -20px;
+            right: -20px;
+        }
+
+        @include tablet {
+            width: 80px;
+            height: 80px;
+            top: -20px;
+            right: -20px;
+        }
+
+        @include mobile {
+            top: -40px;
+            right: 20px;
+        }
+    }
+
+    &__steep-warning-title {
+        color: var(--color-white);
+        @include fluid-text(46, 26);
+        line-height: 0.9;
+        letter-spacing: -0.02;
+    }
+
+    &__steep-warning {
+        display: grid;
+        row-gap: 20px;
+        background-color: var(--color-green);
+        border: var(--border-main);
+        padding: 50px;
+        margin-inline: -55px;
+        margin-bottom: -45px;
+        border-radius: var(--radius-S);
+
+        @include tablet {
+            padding: 40px;
+            margin-inline: -45px;
+        }
+
+        @include mobile-s {
+            padding: 30px;
+            margin-inline: -35px;
+        }
+    }
+
+    &__steep-warning-descritpion {
+        font-family: 'Inter';
+        font-weight: 700;
+        @include fluid-text(20, 16);
+    }
+
+    &__leaf {
+        position: absolute;
+        bottom: 0;
+        right: 88px;
+        width: 500px;
+        height: auto;
+        
+        @include desktop {
+            right: 50px;
+            width: 450px;
+
+        }
+
+        @include tablet {
+            width: 370px;
+        }
+
+        @include mobile-s {
+            width: 300px;
+            right: 20px;
+        }
+    }
+}
