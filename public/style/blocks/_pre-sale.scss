@@ -1,0 +1,255 @@
+.pre-sale {
+    margin-top: 93px;
+    position: relative;
+
+    @include mobile-s {
+        margin-top: 60px;
+    }
+
+    &__inner {
+        padding: 80px;
+
+        @include tablet {
+            padding: 50px;
+        }
+
+        @include mobile {
+            padding: 30px;
+            padding-top: 50px;
+        }
+
+        @include mobile-s {
+            padding: 10px;
+            padding-top: 50px;
+        }
+    }
+    //Главный заголовок
+    &__title {
+        position: absolute;
+        top: -27px;
+        left: 0;
+        right: 0;
+    }
+    // Адрес предзаказа
+    &__addres-wrapper {
+        @include flex-center;
+        flex-wrap: wrap;
+        background-color: var(--color-green-light);
+        border: var(--border-main);
+        box-shadow: var(--shadow-XL-black);
+        border-radius: var(--radius-S);
+        padding: 20px;
+        padding-left: 60px;
+        margin-bottom: 75px;
+
+        @include mobile {
+            flex-direction: column; 
+            row-gap: 22px;
+            justify-content: center;
+            padding: 20px;
+            padding-top: 30px;
+        }
+    }
+
+    &__addres {
+        @include fluid-text(28, 20);
+        font-weight: 700;
+        font-style: italic;
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &__button {
+        @include reset-button;
+        font-weight: 800;
+        font-size: 22px;
+        padding: 17px 42px 17px 42px;
+        border: var(--border-main);
+        box-shadow: var(--shadow-L);
+        background-color: var(--color-green);
+        border-radius: var(--radius-S);
+        cursor: pointer;
+        transition: background-color 0.1s;
+        
+        &:active {
+            background-color: var(--color-white);
+        }
+    }
+    // Основная часть блока
+    &__body-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+        
+        @include desktop {
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+        }
+    }
+
+    &__body-description {
+        @include desktop {
+            text-align: center;
+        }
+    }
+
+    &__body-description-title {
+        font-family: 'Kicker';
+        @include fluid-text(68, 28);
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        & > span {
+            color: var(--color-green);
+        }
+    }
+
+    &__body-description-subtitle {
+        font-family: 'Inter';
+        font-weight: 700;
+        @include fluid-text(24, 16);
+        max-width: 650px;
+    }
+
+    &__body-image-wrapper {
+        position: absolute;
+        top: 20%;
+        left: -55px;
+        width: 110px;
+        height: 110px;
+
+        @include desktop {
+            width: 90px;
+            height: 90px;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__body-image {
+        width: 45px;
+        height: 45px;
+
+        @include desktop {
+            width: 37px;
+            height: 37px;
+        }
+    }
+
+    &__body-clue {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        width: 480px;
+        border: 5px dashed var(--color-black);
+        border-radius: var(--radius-M);
+        padding: 40px 33px 40px 77px;
+        background-image: url(/public/image/Frame-8.png);
+        background-color: var(--color-green-light);
+        font-family: 'Inter';
+        font-weight: 700;
+        @include fluid-text(22, 14);
+
+        @include desktop {
+            padding: 20px;
+            padding-top: 63px;
+            text-align: center;
+        }
+    }
+    // Раунды
+    &__rounds {
+        margin-top: 50px;
+        display: flex;
+        gap: 11px;
+
+        & > :nth-child(2) {
+            grid-template-rows: 65px auto;
+        }
+
+        & > :nth-child(3) {
+            grid-template-rows: 75px auto;
+        }
+
+        & > :nth-child(4) {
+            grid-template-rows: 85px auto;
+        }
+
+        & > :nth-child(5) {
+            grid-template-rows: 95px auto;
+        }
+
+        @include desktop {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include mobile {
+            margin-top: 20px;
+
+        }
+    }
+
+    &__round {
+        display: grid;
+        grid-template-rows: 55px auto;
+        border: var(--border-main);
+        border-radius: var(--radius-M);
+        background-color: var(--color-green);
+        background-image: url(/public/image/Frame\ 9.png);
+        background-repeat: no-repeat;
+        width: 235px;
+        height: 240px;
+    }
+
+    &__round-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: var(--color-white);
+        border: var(--border-main);
+        border-radius: var(--radius-M);
+        margin-inline: -5px;
+        margin-bottom: -5px;
+        padding-bottom: 16px;
+    }
+
+    &__round-number {
+        display: block;
+        margin-top: 17px;
+        text-align: center;
+        font-family: 'Kicker';
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 0.9;
+        letter-spacing: -0.02;
+        flex-basis: 100%;
+    }
+
+    &__round-body-precent-wrapper {
+        display: flex;
+        justify-content: center;
+        column-gap: 5px;
+    }
+
+    &__round-body-price {
+        display: block;
+        text-align: center;
+        font-family: 'Inter';
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 7px;
+    }
+
+    &__round-body-precent-number {
+        font-family: 'Kicker';
+        font-weight: bold;
+        color: var(--color-green);
+        font-size: 60px;
+        line-height: 0.9;
+        letter-spacing: -0.02%;
+    }
+
+}

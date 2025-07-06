@@ -242,6 +242,25 @@ svg * {
   }
 }
 
+.green-frame-M {
+  border: var(--border-main);
+  border-radius: var(--radius-circle);
+  background-color: var(--color-green);
+  box-shadow: var(--shadow-XL-black);
+  width: 110px;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 481px) {
+  .green-frame-M {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .social-call {
   font-family: "Inter";
   font-weight: 800;
@@ -641,7 +660,7 @@ h2 {
 }
 @media (max-width: 1024px) {
   .welcome__inner {
-    padding: 50px;
+    padding: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -867,6 +886,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 10px;
   padding: 50px;
   padding-bottom: 40px;
 }
@@ -953,6 +973,7 @@ h2 {
   .welcome__steep-warning {
     padding: 30px;
     margin-inline: -35px;
+    margin-bottom: -35px;
   }
 }
 .welcome__steep-warning-descritpion {
@@ -983,4 +1004,249 @@ h2 {
     width: 300px;
     right: 20px;
   }
+}
+
+.pre-sale {
+  margin-top: 93px;
+  position: relative;
+}
+@media (max-width: 481px) {
+  .pre-sale {
+    margin-top: 60px;
+  }
+}
+.pre-sale__inner {
+  padding: 80px;
+}
+@media (max-width: 1024px) {
+  .pre-sale__inner {
+    padding: 50px;
+  }
+}
+@media (max-width: 767px) {
+  .pre-sale__inner {
+    padding: 30px;
+    padding-top: 50px;
+  }
+}
+@media (max-width: 481px) {
+  .pre-sale__inner {
+    padding: 10px;
+    padding-top: 50px;
+  }
+}
+.pre-sale__title {
+  position: absolute;
+  top: -27px;
+  left: 0;
+  right: 0;
+}
+.pre-sale__addres-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--color-green-light);
+  border: var(--border-main);
+  box-shadow: var(--shadow-XL-black);
+  border-radius: var(--radius-S);
+  padding: 20px;
+  padding-left: 60px;
+  margin-bottom: 75px;
+}
+@media (max-width: 767px) {
+  .pre-sale__addres-wrapper {
+    flex-direction: column;
+    row-gap: 22px;
+    justify-content: center;
+    padding: 20px;
+    padding-top: 30px;
+  }
+}
+.pre-sale__addres {
+  font-size: clamp(20px, 1.9444444444vw, 28px);
+  font-weight: 700;
+  font-style: italic;
+}
+@media (max-width: 767px) {
+  .pre-sale__addres {
+    text-align: center;
+  }
+}
+.pre-sale__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-weight: 800;
+  font-size: 22px;
+  padding: 17px 42px 17px 42px;
+  border: var(--border-main);
+  box-shadow: var(--shadow-L);
+  background-color: var(--color-green);
+  border-radius: var(--radius-S);
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+.pre-sale__button:active {
+  background-color: var(--color-white);
+}
+.pre-sale__body-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+@media (max-width: 1281px) {
+  .pre-sale__body-wrapper {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+}
+@media (max-width: 1281px) {
+  .pre-sale__body-description {
+    text-align: center;
+  }
+}
+.pre-sale__body-description-title {
+  font-family: "Kicker";
+  font-size: clamp(28px, 4.7222222222vw, 68px);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.pre-sale__body-description-title > span {
+  color: var(--color-green);
+}
+.pre-sale__body-description-subtitle {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: clamp(16px, 1.6666666667vw, 24px);
+  max-width: 650px;
+}
+.pre-sale__body-image-wrapper {
+  position: absolute;
+  top: 20%;
+  left: -55px;
+  width: 110px;
+  height: 110px;
+}
+@media (max-width: 1281px) {
+  .pre-sale__body-image-wrapper {
+    width: 90px;
+    height: 90px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.pre-sale__body-image {
+  width: 45px;
+  height: 45px;
+}
+@media (max-width: 1281px) {
+  .pre-sale__body-image {
+    width: 37px;
+    height: 37px;
+  }
+}
+.pre-sale__body-clue {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 480px;
+  border: 5px dashed var(--color-black);
+  border-radius: var(--radius-M);
+  padding: 40px 33px 40px 77px;
+  background-image: url(/public/image/Frame-8.png);
+  background-color: var(--color-green-light);
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: clamp(14px, 1.5277777778vw, 22px);
+}
+@media (max-width: 1281px) {
+  .pre-sale__body-clue {
+    padding: 20px;
+    padding-top: 63px;
+    text-align: center;
+  }
+}
+.pre-sale__rounds {
+  margin-top: 50px;
+  display: flex;
+  gap: 11px;
+}
+.pre-sale__rounds > :nth-child(2) {
+  grid-template-rows: 65px auto;
+}
+.pre-sale__rounds > :nth-child(3) {
+  grid-template-rows: 75px auto;
+}
+.pre-sale__rounds > :nth-child(4) {
+  grid-template-rows: 85px auto;
+}
+.pre-sale__rounds > :nth-child(5) {
+  grid-template-rows: 95px auto;
+}
+@media (max-width: 1281px) {
+  .pre-sale__rounds {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .pre-sale__rounds {
+    margin-top: 20px;
+  }
+}
+.pre-sale__round {
+  display: grid;
+  grid-template-rows: 55px auto;
+  border: var(--border-main);
+  border-radius: var(--radius-M);
+  background-color: var(--color-green);
+  background-image: url(/public/image/Frame\ 9.png);
+  background-repeat: no-repeat;
+  width: 235px;
+  height: 240px;
+}
+.pre-sale__round-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: var(--color-white);
+  border: var(--border-main);
+  border-radius: var(--radius-M);
+  margin-inline: -5px;
+  margin-bottom: -5px;
+  padding-bottom: 16px;
+}
+.pre-sale__round-number {
+  display: block;
+  margin-top: 17px;
+  text-align: center;
+  font-family: "Kicker";
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 0.9;
+  letter-spacing: -0.02;
+  flex-basis: 100%;
+}
+.pre-sale__round-body-precent-wrapper {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+.pre-sale__round-body-price {
+  display: block;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 7px;
+}
+.pre-sale__round-body-precent-number {
+  font-family: "Kicker";
+  font-weight: bold;
+  color: var(--color-green);
+  font-size: 60px;
+  line-height: 0.9;
+  letter-spacing: -0.02%;
 }/*# sourceMappingURL=main.css.map */

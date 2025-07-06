@@ -48,11 +48,28 @@
     }
 }
 
+.green-frame-M {
+    border: var(--border-main);
+    border-radius: var(--radius-circle);
+    background-color: var(--color-green);
+    box-shadow: var(--shadow-XL-black);
+    width: 110px;
+    height: 110px;
+    @include flex-center;
+    justify-content: center;
+
+    @include mobile-s {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 .social-call {
     font-family: 'Inter';
     font-weight: 800;
     text-align: center;
 }
+
 
 .hidden-mobile {
     @include mobile {
