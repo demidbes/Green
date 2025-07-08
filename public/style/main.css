@@ -323,7 +323,7 @@ h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-h2 {
+.h2 {
   max-width: max-content;
   font-family: "Inter";
   font-weight: 800;
@@ -336,7 +336,7 @@ h2 {
   text-align: center;
 }
 @media (max-width: 481px) {
-  h2 {
+  .h2 {
     padding-inline: 20px;
     max-width: 270px;
   }
@@ -1009,6 +1009,7 @@ h2 {
 .pre-sale {
   margin-top: 93px;
   position: relative;
+  margin-bottom: 120px;
 }
 @media (max-width: 481px) {
   .pre-sale {
@@ -1249,4 +1250,262 @@ h2 {
   font-size: 60px;
   line-height: 0.9;
   letter-spacing: -0.02%;
+}
+
+.pre-order {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  row-gap: 589px;
+  background: url(/public/image/background-pre-order.png), linear-gradient(to bottom, var(--color-green-light) 50%, #98E191 50%);
+  background-repeat: no-repeat;
+  background-position: center 141px;
+  background-size: contain;
+}
+@media (max-width: 1281px) {
+  .pre-order {
+    row-gap: 41vw;
+  }
+}
+@media (max-width: 1024px) {
+  .pre-order {
+    background-position: center 100px, center 100px;
+  }
+}
+@media (max-width: 481px) {
+  .pre-order {
+    background-position: center 80px, center 0px;
+  }
+}
+@media (max-width: 433px) {
+  .pre-order {
+    background-position: center 120px, center 0px;
+  }
+}
+.pre-order__description > :nth-child(1) {
+  font-family: "Kicker";
+  font-weight: bold;
+  font-size: clamp(28px, 6.8055555556vw, 98px);
+  line-height: 0.9;
+  letter-spacing: -0.02;
+}
+.pre-order__description > :nth-child(2) {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: clamp(16px, 1.9444444444vw, 28px);
+}
+.pre-order__block {
+  position: relative;
+  max-width: 100%;
+  height: 520px;
+}
+
+.roadmap {
+  background-image: url(/public/image/background-roadmap.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.roadmap__title {
+  font-size: clamp(28px, 6.8055555556vw, 98px);
+  font-family: "Kicker";
+  font-weight: bold;
+  letter-spacing: -0.02;
+  text-align: center;
+  padding-top: 80px;
+  margin-bottom: 41px;
+}
+.roadmap__inner-image {
+  position: absolute;
+  top: 219px;
+  left: 0;
+}
+@media (max-width: 1024px) {
+  .roadmap__inner-image {
+    width: 1024px;
+    height: 787px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 767px) {
+  .roadmap__inner-image {
+    width: 800px;
+    height: 583px;
+    margin-right: -10px;
+  }
+}
+.roadmap__inner {
+  display: grid;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner {
+    gap: 60px;
+    background-color: #2E1A0A;
+    margin-inline: -30px;
+    margin-top: 1000px;
+  }
+}
+@media (max-width: 1281px) {
+  .roadmap__inner {
+    margin-top: 800px;
+  }
+}
+@media (max-width: 767px) {
+  .roadmap__inner {
+    margin-top: 600px;
+    margin-inline: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .roadmap__inner {
+    margin-top: 600px;
+    margin-inline: -10px;
+  }
+}
+.roadmap__inner > :nth-child(1) {
+  justify-self: start;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner > :nth-child(1) {
+    margin-top: 0;
+    justify-self: center;
+  }
+}
+.roadmap__inner > :nth-child(1)::after {
+  content: url(/public/image/icons/left.svg);
+  position: absolute;
+  top: 50px;
+  right: -95px;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner > :nth-child(1)::after {
+    display: none;
+  }
+}
+.roadmap__inner > :nth-child(2) {
+  justify-self: end;
+  margin-top: -100px;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner > :nth-child(2) {
+    margin-top: 0;
+    justify-self: center;
+  }
+}
+.roadmap__inner > :nth-child(2)::after {
+  content: url(/public/image/icons/right.svg);
+  position: absolute;
+  top: 50px;
+  left: -95px;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner > :nth-child(2)::after {
+    display: none;
+  }
+}
+.roadmap__inner > :nth-child(3) {
+  justify-self: start;
+  margin-top: -50px;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner > :nth-child(3) {
+    margin-top: 0;
+    justify-self: center;
+  }
+}
+.roadmap__inner > :nth-child(3)::after {
+  content: url(/public/image/icons/left.svg);
+  position: absolute;
+  top: 50px;
+  right: -95px;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner > :nth-child(3)::after {
+    display: none;
+  }
+}
+.roadmap__inner > :nth-child(4) {
+  justify-self: end;
+  margin-top: -160px;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner > :nth-child(4) {
+    margin-top: 0;
+    justify-self: center;
+  }
+}
+.roadmap__inner > :nth-child(4)::after {
+  content: url(/public/image/icons/right.svg);
+  position: absolute;
+  top: 50px;
+  left: -95px;
+}
+@media (max-width: 1440px) {
+  .roadmap__inner > :nth-child(4)::after {
+    display: none;
+  }
+}
+.roadmap__item {
+  position: relative;
+  padding: 40px;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 340px;
+  max-width: 440px;
+  background-color: var(--color-green-light);
+  border: var(--border-main);
+  border-radius: var(--radius-S);
+  box-shadow: var(--shadow-XL-black);
+}
+@media (max-width: 1440px) {
+  .roadmap__item {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 481px) {
+  .roadmap__item {
+    max-width: 300px;
+    height: auto;
+  }
+}
+.roadmap__item-title {
+  font-family: "Kicker";
+  font-weight: bold;
+  line-height: 0.9;
+  letter-spacing: -0.02;
+  font-size: clamp(26px, 2.9166666667vw, 42px);
+}
+.roadmap__item-number {
+  position: absolute;
+  top: -37px;
+  right: 15px;
+  width: 90px;
+  height: 90px;
+  font-size: clamp(42px, 3.3333333333vw, 48px);
+  font-family: "Kicker";
+  font-weight: bold;
+  line-height: 0.9;
+  letter-spacing: -0.02;
+  background-color: var(--color-green);
+  border-radius: var(--radius-circle);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: var(--border-main);
+  box-shadow: var(--shadow-XL-black);
+}
+.roadmap__list {
+  font-family: "Inter";
+  font-weight: 600;
+  line-height: 1.2;
+  font-size: 16px;
+  list-style: disc;
+  display: grid;
+  padding-left: 25px;
+  gap: 12px;
 }/*# sourceMappingURL=main.css.map */

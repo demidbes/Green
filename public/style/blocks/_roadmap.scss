@@ -1,0 +1,212 @@
+.roadmap {
+    background-image: url(/public/image/background-roadmap.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &__title {
+        @include fluid-text(98, 28);
+        font-family: 'Kicker';
+        font-weight: bold;
+        letter-spacing: -0.02;
+        text-align: center;
+        padding-top: 80px;
+        margin-bottom: 41px;
+    }
+    
+    &__inner-image {
+        position: absolute;
+        top: 219px;
+        left: 0;
+
+        @include tablet {
+            width: 1024px;
+            height: 787px;
+            object-fit: cover;
+        }
+
+        @include mobile {
+            width: 800px;
+            height: 583px;
+            margin-right: -10px;
+        }
+    }
+
+    &__inner {
+        display: grid;
+        
+        @include desktop-M {
+            gap: 60px;
+            background-color: #2E1A0A;
+            margin-inline: -30px;
+            margin-top: 1000px;
+        }
+
+        @include desktop {
+            margin-top: 800px;
+        }
+
+    
+
+        @include mobile {
+            margin-top: 600px;
+            margin-inline: -20px;
+        }
+
+        @include mobile {
+            margin-top: 600px;
+            margin-inline: -10px;
+        }
+
+        & > :nth-child(1) {
+            justify-self: start;
+
+            @include desktop-M {
+                margin-top: 0;
+                justify-self: center;
+            }
+
+            &::after {
+                content: url(/public/image/icons/left.svg);
+                position: absolute;
+                top: 50px;
+                right: -95px;
+
+                @include desktop-M {
+                    display: none;
+                }
+            }
+        }
+
+        & > :nth-child(2) {
+            justify-self: end;
+            margin-top: -100px;
+
+            @include desktop-M {
+                margin-top: 0;
+                justify-self: center;
+            }
+
+            &::after {
+                content: url(/public/image/icons/right.svg);
+                position: absolute;
+                top: 50px;
+                left: -95px;
+
+                @include desktop-M {
+                    display: none;
+                }
+            }
+        }
+
+        & > :nth-child(3) {
+            justify-self: start;
+            margin-top: -50px;
+
+            @include desktop-M {
+                margin-top: 0;
+                justify-self: center;
+            }
+
+            &::after {
+                content: url(/public/image/icons/left.svg);
+                position: absolute;
+                top: 50px;
+                right: -95px;
+
+                @include desktop-M {
+                    display: none;
+                }
+            }
+        }
+
+        & > :nth-child(4) {
+            justify-self: end;
+            margin-top: -160px;
+
+            @include desktop-M {
+                margin-top: 0;
+                justify-self: center;
+            }
+
+            &::after {
+                content: url(/public/image/icons/right.svg);
+                position: absolute;
+                top: 50px;
+                left: -95px;
+
+                @include desktop-M {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        padding: 40px;
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 340px;
+        max-width: 440px;
+        background-color: var(--color-green-light);
+        border: var(--border-main);
+        border-radius: var(--radius-S);
+        box-shadow: var(--shadow-XL-black);
+        
+
+        @include desktop-M {
+            margin-bottom: 60px;
+        }
+
+        @include mobile-s {
+            max-width: 300px;
+            height: auto;
+        }
+    }
+
+    &__item-title {
+        font-family: 'Kicker';
+        font-weight: bold;
+        line-height: 0.9;
+        letter-spacing: -0.02;
+        @include fluid-text(42, 26);
+    }
+
+    &__item-number {
+        position: absolute;
+        top: -37px;
+        right: 15px;
+        width: 90px;
+        height: 90px;
+        @include fluid-text(48, 42);
+        font-family: 'Kicker';
+        font-weight: bold;
+        line-height: 0.9;
+        letter-spacing: -0.02;
+        background-color: var(--color-green);
+        border-radius: var(--radius-circle);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: var(--border-main);
+        box-shadow: var(--shadow-XL-black);
+    }
+
+    &__list {
+        font-family: 'Inter';
+        font-weight: 600;
+        line-height: 1.2;
+        font-size: 16px;
+        list-style: disc;
+        display: grid;
+        padding-left: 25px;
+        gap: 12px;
+    }
+
+
+}
